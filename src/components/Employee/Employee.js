@@ -6,6 +6,8 @@ import LeaveApplication from './LeaveApplication';
 import SalaryReport from '../SalaryReport.js'; 
 // import LeaveRequests from '../LeaveRequests.js'; 
 import ImageSlider from '../ImageSlider.js';
+import MyTeam from './MyTeam.js';
+
 
 const Employee = () => {
   const [selectedComponent, setSelectedComponent] = useState(null);
@@ -23,6 +25,7 @@ const Employee = () => {
         <div className="employee-content">
           {selectedComponent === 'leave' && <LeaveApplication />} {/* Render LeaveApplication component */}
           {selectedComponent === 'salaryReports' && <SalaryReport />}
+          {selectedComponent === 'myteam' && <MyTeam />}
         </div>
       </div>
     </main>

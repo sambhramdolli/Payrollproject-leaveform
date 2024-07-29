@@ -6,6 +6,7 @@ import { LeaveContext } from '../LeaveContext';
 const LeaveApplication = () => {
   const { addLeaveRequest } = useContext(LeaveContext);
   const [formData, setFormData] = useState({
+    employeeId: '', // Added employeeId to formData
     startDate: '',
     endDate: '',
     leaveType: '',
@@ -55,6 +56,7 @@ const LeaveApplication = () => {
     }
 
     setFormData({
+      employeeId: '',
       startDate: '',
       endDate: '',
       leaveType: '',
@@ -74,6 +76,16 @@ const LeaveApplication = () => {
       <div className="leave-form-container">
         <h2>Leave Application</h2>
         <form className="leave-form" onSubmit={handleSubmit}>
+          <label>
+            Employee ID
+            <input 
+              type="text" 
+              name="employeeId" 
+              value={formData.employeeId} 
+              onChange={handleInputChange} 
+              placeholder="Enter Employee ID" 
+            />
+          </label>
           <label>
             Type of leave
             <select name="leaveType" value={formData.leaveType} onChange={handleInputChange}>
@@ -136,6 +148,7 @@ const LeaveApplication = () => {
           <table>
             <thead>
               <tr>
+                <th>Employee ID</th> {/* Added Employee ID column */}
                 <th>Type of leave</th>
                 <th>Start Date</th>
                 <th>End Date</th>
@@ -146,6 +159,7 @@ const LeaveApplication = () => {
             <tbody>
               {leaveData.map((leave, index) => (
                 <tr key={index}>
+                  <td>{leave.employeeId}</td> {/* Display Employee ID */}
                   <td>{leave.leaveType}</td>
                   <td>{leave.startDate}</td>
                   <td>{leave.endDate}</td>
@@ -162,6 +176,7 @@ const LeaveApplication = () => {
 };
 
 export default LeaveApplication;
+
 
 
 

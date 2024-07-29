@@ -48,7 +48,7 @@
     display: flex;
   }
   
-  .button44, .button55, .button66, .button77 {
+  .button44, .button55, .button88, .button77 {
     padding: 10px;
     text-align: left;
     border: none;
@@ -62,7 +62,7 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   }
   
-  .button44:hover, .button55:hover, .button67:hover, .button77:hover {
+  .button44:hover, .button55:hover, .button88:hover, .button77:hover {
     background-color:transparent;
   }
   

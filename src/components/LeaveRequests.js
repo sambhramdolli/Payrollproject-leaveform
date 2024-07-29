@@ -1,3 +1,4 @@
+// LeaveRequests.js
 import React, { useContext } from 'react';
 import './LeaveRequests.css'; 
 import { LeaveContext } from './LeaveContext';
@@ -19,7 +20,7 @@ const LeaveRequests = () => {
       <ul className="leave-requests-list">
         {leaveRequests.map(request => (
           <li key={request.id} className="leave-request-item">
-            <h3>{request.employeeName}</h3>
+            <h3>Employee ID: {request.employeeId}</h3> {/* Added employeeId */}
             <p>Leave Type: {request.leaveType}</p>
             <p>Start Date: {request.startDate}</p>
             <p>End Date: {request.endDate}</p>

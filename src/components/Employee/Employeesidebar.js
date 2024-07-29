@@ -15,6 +15,7 @@ const Employeesidebar = ({ onButtonClick }) => {
         <div className="dropdown-content11">
           <button className="button44" onClick={() => onButtonClick('leave')}>Leave</button>
           <button className="button77" onClick={() => onButtonClick('salaryReports')}>Salary Reports</button>
+          <button className="button88" onClick={() => onButtonClick('myteam')}>My Team</button> {/* Corrected to 'myteam' */}
         </div>
       </div>
     </div>
