@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './sidebar.css'; 
+import './sidebar.css';
 
 const SideBar = ({ onButtonClick }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);

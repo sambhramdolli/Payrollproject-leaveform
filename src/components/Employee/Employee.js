@@ -3,8 +3,7 @@ import './Employee.css';
 import NavBar from '../Navbar';
 import SideBar from '../Employee/Employeesidebar.js';
 import LeaveApplication from './LeaveApplication'; 
-import SalaryReport from '../SalaryReport.js'; 
-// import LeaveRequests from '../LeaveRequests.js'; 
+import SalaryReport from '../SalaryReport.js';  
 import ImageSlider from '../ImageSlider.js';
 import MyTeam from './MyTeam.js';
 

@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
-import './addEmployee.css'; 
+import './addEmployee.css';
 
 const AddEmployee = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [position, setPosition] = useState('');
+  const [project, setProject] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Employee Added:', { name, email, position });
+    console.log('Employee Added:', { name, email, position, project });
     
     setName('');
     setEmail('');
     setPosition('');
+    setProject('');
   };
 
   return (
@@ -52,6 +54,23 @@ const AddEmployee = () => {
           />
           <label htmlFor="position" className="add-employee-label">Position</label>
         </div>
+        <div className="form-group">
+          <select
+            id="project"
+            className="add-employee-select"
+            value={project}
+            onChange={(e) => setProject(e.target.value)}
+            required
+          >
+            <option value="" disabled>Select Project</option>
+            <option value="Project 1">Project 1</option>
+            <option value="Project 2">Project 2</option>
+            <option value="Project 3">Project 3</option>
+            <option value="Project 4">Project 4</option>
+            <option value="Project 5">Project 5</option>
+          </select>
+          <label htmlFor="project" className="add-employee-label">Project</label>
+        </div>
         <button type="submit">Add Employee</button>
       </form>
     </div>
@@ -59,3 +78,4 @@ const AddEmployee = () => {
 };
 
 export default AddEmployee;
+
